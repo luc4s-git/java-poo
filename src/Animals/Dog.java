@@ -1,6 +1,7 @@
 package Animals;
 
 public class Dog {
+    static int dogIndex; // sets a value at the class rather than the object, meaning any object build from this class will share the value
     private String name = "Dog Meat";
     private String color;
     private int height;
@@ -12,6 +13,13 @@ public class Dog {
         this.height = height;
         this.weight = weight;
         this.tailSize = tailSize;
+
+        dogIndex ++;
+    }
+
+    // display static value
+    public int getIndex() {
+        return dogIndex;
     }
 
     public void setName(String name) {
@@ -37,5 +45,12 @@ public class Dog {
             default:
                 System.out.println(this.name + " looks back at you and wiggles his tail.");
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }
