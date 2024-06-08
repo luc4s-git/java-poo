@@ -5,15 +5,14 @@ public class Main {
 //        String[] arg = {"Greetings", "World"};
 //        greetings(arg);
 
-        Dog dog_1 = new Dog();
+        Dog dog_1 = new Dog("Black", 100, 10.54, 20);
 
-        dog_1.name = "Cookie";
-        dog_1.color = "Black";
-        dog_1.height = 100;
-        dog_1.weight = 1140.50;
-        dog_1.tailSize = 20;
+        dog_1.setName("Cookie");
 
-        System.out.println(dog_1.weight);
+        dog_1.bark();
+
+        dog_1.action("talk");
+        dog_1.action("kick");
     }
 
     public static void greetings(String[] who) {
