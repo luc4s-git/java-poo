@@ -1,4 +1,4 @@
-package Animals;
+package Thing;
 
 public class Dog {
     static int dogIndex; // sets a value at the class rather than the object, meaning any object build from this class will share the value
@@ -30,8 +30,8 @@ public class Dog {
         return this.name;
     }
 
-    public void bark() {
-        System.out.printf("%s says: bark! \n", this.name);
+    public void say() {
+        System.out.printf("%s says: %s! \n", this.name);
     }
 
     public void action(String action) {
